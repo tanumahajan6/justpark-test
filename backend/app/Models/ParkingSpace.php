@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class ParkingSpace extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'location', 'hourly_price'];
+    protected $fillable = ['location', 'hourly_price'];
 
     public function bookings(): HasMany
     {

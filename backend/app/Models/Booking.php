@@ -10,7 +10,7 @@ class Booking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id', 'parking_space_id', 'user_id', 'start_time', 'end_time'
+        'parking_space_id', 'user_id', 'start_time', 'end_time'
     ];
 
     // Auto-cast these columns to Carbon instances for easy comparison

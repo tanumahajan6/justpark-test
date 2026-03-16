@@ -1,0 +1,182 @@
+/* ─── Results Section ────────────────────────────────────────── */
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.results-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--slate-800);
+}
+
+.results-count {
+  font-size: 0.8rem;
+  color: var(--slate-400);
+  background: var(--slate-100);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+}
+
+/* ─── Table Card ─────────────────────────────────────────────── */
+.table-card {
+  background: var(--slate-0);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── Table ──────────────────────────────────────────────────── */
+.parking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.parking-table thead {
+  background: var(--slate-50);
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.parking-table th {
+  padding: 0.75rem 1.25rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--slate-400);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.parking-table tbody tr {
+  border-bottom: 1px solid var(--slate-100);
+  transition: background var(--transition);
+}
+
+.parking-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.parking-table tbody tr:hover {
+  background: var(--green-50);
+}
+
+.parking-table td {
+  padding: 1rem 1.25rem;
+  color: var(--slate-700);
+  vertical-align: middle;
+}
+
+/* ─── Table Cell Variants ────────────────────────────────────── */
+.cell-id {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--slate-400);
+}
+
+.cell-location {
+  font-weight: 500;
+  color: var(--slate-800);
+}
+
+.cell-location__sub {
+  font-size: 0.75rem;
+  color: var(--slate-400);
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+.cell-price {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--green-600);
+}
+
+.cell-price__unit {
+  font-size: 0.7rem;
+  color: var(--slate-400);
+  margin-left: 2px;
+  font-family: var(--font-sans);
+}
+
+/* ─── Book Button ────────────────────────────────────────────── */
+.btn--book {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--green-600);
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--book:hover {
+  background: var(--green-500);
+  color: white;
+  border-color: var(--green-500);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--book:active {
+  background: var(--green-600);
+  border-color: var(--green-600);
+}
+
+/* ─── Empty State ────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  color: var(--slate-400);
+}
+
+.empty-state__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  opacity: 0.5;
+}
+
+.empty-state__text {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--slate-500);
+}
+
+.empty-state__sub {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  color: var(--slate-400);
+}
+
+/* ─── Loading Skeleton ───────────────────────────────────────── */
+.loading-row td {
+  padding: 1rem 1.25rem;
+}
+
+.skeleton {
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--slate-100) 25%, var(--slate-50) 50%, var(--slate-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

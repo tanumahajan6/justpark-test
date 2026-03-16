@@ -1,0 +1,74 @@
+/* ─── Status Message ─────────────────────────────────────────── */
+.status-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 1.125rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Indicator Dot ──────────────────────────────────────────── */
+.status-message__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* ─── Variants ───────────────────────────────────────────────── */
+.status-message--success {
+  background: var(--green-50);
+  border-color: var(--green-100);
+  color: var(--green-900);
+}
+
+.status-message--success .status-message__dot {
+  background: var(--green-500);
+}
+
+.status-message--error {
+  background: var(--red-50);
+  border-color: #fecaca;
+  color: var(--red-900);
+}
+
+.status-message--error .status-message__dot {
+  background: var(--red-600);
+}
+
+.status-message--info {
+  background: var(--blue-50);
+  border-color: #bfdbfe;
+  color: #1e3a5f;
+}
+
+.status-message--info .status-message__dot {
+  background: var(--blue-600);
+}
+
+.status-message--warning {
+  background: var(--amber-50);
+  border-color: #fde68a;
+  color: #451a03;
+}
+
+.status-message--warning .status-message__dot {
+  background: var(--amber-600);
+}
