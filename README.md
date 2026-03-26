@@ -281,6 +281,6 @@ For a Laravel project of this scope where Eloquent is the permanent data layer, 
 
 | Goal | Status |
 |---|---|
-| Optimistic locking / race condition prevention | ✅ `lockForUpdate()` inside `DB::transaction` |
+| Pessimistic locking / race condition prevention | ✅ `lockForUpdate()` inside `DB::transaction` |
 | Error handling and validation UX | ✅ Client-side date validation, field-level errors, 409 conflict message |
 | Testing | ✅ 27 feature tests covering all overlap cases and edge conditions |
