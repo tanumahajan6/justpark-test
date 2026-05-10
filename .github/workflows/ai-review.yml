@@ -1,0 +1,22 @@
+name: Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write # Required to post comments
+  contents: read
+
+jobs:
+  ai-guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # This points to the action you just built!
+      - name: Run AI Reviewer
+        uses: tanumahajan6/ai-reviewer-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
